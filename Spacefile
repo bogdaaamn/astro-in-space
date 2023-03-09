@@ -1,0 +1,9 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: static-astro-in-space
+    src: .
+    engine: static
+    commands:
+      - npm run build
+    serve: dist
