@@ -1,9 +1,11 @@
 # Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
 v: 0
 micros:
-  - name: static-astro-in-space
+  - name: ssr-astro-in-space
     src: .
-    engine: static
+    engine: nodejs16
     commands:
       - npm run build
-    serve: dist
+    include:
+      - dist
+    run: "node ./dist/server/entry.mjs"
